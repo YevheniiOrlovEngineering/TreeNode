@@ -159,17 +159,20 @@ public class TreeNode<T> {
         root.right.addChild("I", true, true);
         root.right.left.addChild("H", true, true);
 
+        System.out.println("PreOrder");
         TreeNode.depthFirstTraversal_Preorder(root);
         System.out.println();
 
+        System.out.println("InOrder");
         TreeNode.depthFirstTraversal_Inorder(root);
         System.out.println();
 
+        System.out.println("PostOrder");
         TreeNode.depthFirstTraversal_Postorder(root);
         System.out.println();
 
-        List<String> levelTraversedNodes = TreeNode.breadthFirstTraversal(root);
-        levelTraversedNodes.forEach(System.out::println);
+        System.out.println("LevelOrder");
+        TreeNode.breadthFirstTraversal(root).forEach(System.out::println);
 
     }
 }
